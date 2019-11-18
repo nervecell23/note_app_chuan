@@ -1,1 +1,1 @@
-## Single page app
+## A single page Note app

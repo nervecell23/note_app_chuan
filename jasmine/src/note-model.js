@@ -1,9 +1,15 @@
-function Note(message){
+(function(exports){
 
-  this.text = message;
+  function Note(message){
 
-}
+    this.text = message;
 
-Note.prototype.getText = function(){
-  return this.text;
-}
+  }
+
+  Note.prototype.getText = function(){
+    return this.text;
+  }
+
+  exports.Note = Note;
+
+})(this);

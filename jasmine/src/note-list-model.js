@@ -10,8 +10,7 @@
   }
 
   NoteList.prototype.createNote = function(string){
-    newNote = new Note(string);
-    this.noteList.push(newNote);
+    this.noteList.push(new Note(string));
   }
 
   exports.NoteList = NoteList;

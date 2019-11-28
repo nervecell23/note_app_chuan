@@ -5,16 +5,12 @@
   }
 
   NoteListView.prototype.render = function(){
-
-    var stringSum;
-
+    var notesArray = this.noteList.returnNotes();
+    var stringSum = notesArray.map(process).reduce((a, b)=>{return a + b;});
+    
     function process(element){
       return "<li><div>" + element.getText() + "</div></li>";
     }
-
-    var notesArray = this.noteList.returnNotes();
-    stringSum = notesArray.map(process);
-    stringSum = stringSum.reduce((a, b)=>{return a + b;});
 
     return "<ul>" + stringSum + "</ul>";
   }

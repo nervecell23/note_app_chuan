@@ -12,12 +12,9 @@ describe("NoteListView", ()=>{
       newNoteList = new NoteList();
       newNoteList.createNote("test message 1");
       newNoteList.createNote("test message 2");
-
       subject = new NoteListView(newNoteList);
       result = subject.render();
       expected = "<ul><li><div>test message 1</div></li><li><div>test message 2</div></li></ul>";
-
-      console.log(expected);
       expect(result).toEqual(expected);
     })
   })

@@ -17,5 +17,13 @@ describe("NoteListView", ()=>{
       expected = "<ul><li><div>test message 1</div></li><li><div>test message 2</div></li></ul>";
       expect(result).toEqual(expected);
     })
+
+    it("handles empty note list", ()=>{
+      newNoteList = new NoteList();
+      subject = new NoteListView(newNoteList);
+      result = subject.render();
+      expected = "<ul></ul>";
+      expect(result).toEqual(expected);
+    })
   })
 })

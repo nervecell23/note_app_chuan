@@ -1,13 +1,24 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <script src="jasmine/src/note-controller.js"></script>
+    <script src="jasmine/src/note-list-model.js"></script>
+    <script src="jasmine/src/note-model.js"></script>
+    <script src="jasmine/src/note-list-view.js"></script>
   </head>
 
   <body>
     <div id="app"> Hello ppl </div>
   </body>
 
-  <script src="jasmine/src/note-controller.js"></script>
+  <script>
+    var noteList = new NoteList()
+    var controller = new Controller(noteList);
+    console.log(controller);
+    controller.render();
+  </script>
+
+
 
 
 

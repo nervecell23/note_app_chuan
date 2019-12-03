@@ -12,7 +12,9 @@
     var stringSum = notesArray.map(process).reduce((a, b)=>{return a + b;});
 
     function process(element){
-      return "<li><div>" + element.getText() + "</div></li>";
+      var text = element.getText();
+      if(text.length > 20) text = text.slice(0, 20);
+      return "<li><div>" + text + "</div></li>";
     }
 
     return "<ul>" + stringSum + "</ul>";

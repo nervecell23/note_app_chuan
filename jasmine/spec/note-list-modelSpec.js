@@ -23,6 +23,15 @@ describe("NoteList", ()=>{
       result = subject.returnNotes()[0].getText();
       expect(result).toBe("new message");
     })
+
+    it("adds an id to each note", ()=>{
+      subject = new NoteList();
+      subject.createNote("message 1");
+      subject.createNote("message 2");
+      result = subject.returnNotes();
+      expect(result[0].id).toEqual(0);
+      expect(result[1].id).toEqual(1);
+    })
   })
 
 

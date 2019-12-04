@@ -1,7 +1,7 @@
 (function(exports){
 
-  function Note(message){
-
+  function Note(id, message){
+    this.id = id;
     this.text = message;
 
   }

@@ -10,6 +10,10 @@
     return this.text;
   }
 
+  Note.prototype.getId = function(){
+    return this.id;
+  }
+
   exports.Note = Note;
 
 })(this);

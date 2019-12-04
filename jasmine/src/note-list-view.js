@@ -13,8 +13,9 @@
 
     function process(element){
       var text = element.getText();
+      var id = element.getId();
       if(text.length > 20) text = text.slice(0, 20);
-      return "<li><div>" + text + "</div></li>";
+      return `<li><div><a href=\"\#notes/${id}\">` + text + "</a></div></li>";
     }
 
     return "<ul>" + stringSum + "</ul>";
